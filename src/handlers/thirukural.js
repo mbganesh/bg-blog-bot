@@ -10,7 +10,8 @@ console.log(`📖 Loaded ${kurals.length} Thirukkurals`);
  * Registers the /t and /thirukural command handlers
  */
 function registerThirukkuralHandler() {
-  bot.onText(/\/(t|thirukural)/, (msg) => {
+  const regex = /\/(thirukural)/; // /\/(t|thirukural)/
+  bot.onText(regex, (msg) => {
     const chatId = msg.chat.id;
     console.log(
       "🚀 ~ thirukural.js:15 ~ registerThirukkuralHandler ~ chatId:",

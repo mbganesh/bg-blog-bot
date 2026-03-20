@@ -10,7 +10,8 @@ console.log(`📜 Loaded ${quotes.length} quotes`);
  * Registers the /q and /quote command handlers
  */
 function registerQuoteHandler() {
-  bot.onText(/\/(q|quote)/, (msg) => {
+  const regex = /\/(quote)/; // /\/(q|quote)/
+  bot.onText(regex, (msg) => {
     const chatId = msg.chat.id;
     console.log("🚀 ~ quote.js:15 ~ registerQuoteHandler ~ chatId:", chatId);
 

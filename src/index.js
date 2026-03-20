@@ -1,20 +1,28 @@
 require("dotenv").config();
 
+// Disable node-telegram-bot-api deprecation warnings
+process.env.NTBA_FIX_350 = 1;
+process.env.NTBA_FIX_319 = 1;
+
 const bot = require("./bot");
-const { registerStartHandler } = require("./handlers/start");
+const { registerDownloadHandler } = require("./handlers/download");
 const { registerAiHandler } = require("./handlers/ai");
+const { registerStartHandler } = require("./handlers/start");
 const { registerQuoteHandler } = require("./handlers/quote");
 const { registerThirukkuralHandler } = require("./handlers/thirukural");
 const { registerKavithaigalHandler } = require("./handlers/kavithaigal");
-const { registerDownloadHandler } = require("./handlers/download");
+const { registerRemindHandler } = require("./handlers/remind");
+const { registerInfoHandler } = require("./handlers/info");
+const { registerVideoDownloadHandler } = require("./handlers/video-download");
 
 // Register all handlers (order matters — commands first, then general message handler)
 registerStartHandler();
-// registerAiHandler();
 registerQuoteHandler();
 registerThirukkuralHandler();
 registerKavithaigalHandler();
-registerDownloadHandler();
+registerRemindHandler();
+registerInfoHandler();
+registerVideoDownloadHandler();
 
 // Log when bot is ready
 bot.on("polling_error", (error) => {

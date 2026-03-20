@@ -21,6 +21,11 @@ Here's everything I can do:
 /q or /quote — Get a random motivational quote
 /t or /thirukural — Get a random Thirukkural
 /k or /kavithaigal — Get a random Tamil Kavithai
+/k or /kavithaigal — Get a random Tamil Kavithai
+/remind — Set a timed reminder
+/info — Show user, chat & server info
+/download <url> — Download a video stream
+
 
     `.trim();
 
@@ -34,10 +39,9 @@ Here's everything I can do:
 🆘 *Help — Smart Bot*
 
 *🎬 Download Videos:*
-1️⃣ Copy a video URL from any supported platform
-2️⃣ Paste it here in the chat
-3️⃣ Wait for the download to complete
-4️⃣ Receive the video file!
+• Paste a supported video URL directly in the chat to download it
+• OR use /download <url> to grab a 720p stream if available
+
 
 *🧠 AI Chat:*
 • Just type any message to chat with AI
@@ -52,6 +56,15 @@ Here's everything I can do:
 
 *🎭 கவிதைகள்:*
 • Use /k or /kavithaigal to get a random Tamil poem
+
+*⏰ Reminders:*
+• Use /remind 10m Drink water — remind in 10 minutes
+• Use /remind 8pm Meeting — remind at 8 PM
+• Use /remind list — see active reminders
+• Use /remind cancel 1 — cancel a reminder
+
+*📱 Info:*
+• Use /info or /device — view your user, chat & server details
 
 *Tips:*
 • Make sure videos are under 50 MB

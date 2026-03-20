@@ -31,7 +31,8 @@ console.log(
  * Registers the /k and /kavithaigal command handlers
  */
 function registerKavithaigalHandler() {
-  bot.onText(/\/(k|kavithaigal)/, (msg) => {
+  const regex = /\/(kavithaigal)/; // /\/(k|kavithaigal)/
+  bot.onText(regex, (msg) => {
     const chatId = msg.chat.id;
     console.log('🚀 ~ kavithaigal.js:36 ~ registerKavithaigalHandler ~ chatId:', chatId)
 
