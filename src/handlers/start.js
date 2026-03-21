@@ -4,6 +4,7 @@ const bot = require("../bot");
  * Registers the /start command handler
  */
 function registerStartHandler() {
+  console.log(`📜 Start module loaded!!!!!!!!!!!!`);
   bot.onText(/\/start/, (msg) => {
     const chatId = msg.chat.id;
     const firstName = msg.from.first_name || "there";
@@ -18,13 +19,14 @@ Here's everything I can do:
 *📋 Available Commands:*
 /start — Show this welcome message
 /help — Show detailed help
-/q or /quote — Get a random motivational quote
-/t or /thirukural — Get a random Thirukkural
-/k or /kavithaigal — Get a random Tamil Kavithai
-/k or /kavithaigal — Get a random Tamil Kavithai
+/quote — Get a random motivational quote
+/thirukural — Get a random Thirukkural
+/kavithaigal — Get a random Tamil Kavithai
+/kavithaigal — Get a random Tamil Kavithai
 /remind — Set a timed reminder
 /info — Show user, chat & server info
-/download <url> — Download a video stream
+/download - Get a downloadable URL
+/getmedia — Download a video stream
 
 
     `.trim();

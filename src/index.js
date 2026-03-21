@@ -14,6 +14,7 @@ const { registerKavithaigalHandler } = require("./handlers/kavithaigal");
 const { registerRemindHandler } = require("./handlers/remind");
 const { registerInfoHandler } = require("./handlers/info");
 const { registerVideoDownloadHandler } = require("./handlers/video-download");
+const { registerGetMediaHandler } = require("./handlers/get-media");
 
 // Register all handlers (order matters — commands first, then general message handler)
 registerStartHandler();
@@ -23,6 +24,7 @@ registerKavithaigalHandler();
 registerRemindHandler();
 registerInfoHandler();
 registerVideoDownloadHandler();
+registerGetMediaHandler();
 
 // Log when bot is ready
 bot.on("polling_error", (error) => {

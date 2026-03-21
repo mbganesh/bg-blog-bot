@@ -41,6 +41,8 @@ function ensureDownloadDir() {
  * @param {string} filePath
  */
 function cleanupFile(filePath) {
+  // FIXME: Deleting file will be available upcoming phases
+  return;
   try {
     if (fs.existsSync(filePath)) {
       fs.unlinkSync(filePath);
